@@ -12,7 +12,7 @@ var express = require('express'),
 app.use(bodyParser.urlencoded({ extended: true}));
 
 // server static files from public folder
-app.use(express.static(__dirname + 'public'));
+app.use(express.static(__dirname + '/public'));
 
 // set view engine to hbs (handlebars)
 app.set('view engine', 'hbs');
@@ -36,6 +36,8 @@ io.on('connection', function(socket){
 		console.log('user disconnected');
 	});
 });
+
+
 
 
 
